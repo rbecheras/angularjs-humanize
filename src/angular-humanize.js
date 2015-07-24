@@ -3,9 +3,9 @@
 
   angular.module('angular-humanize', []).
     filter('humanizeFilesize', function () {
-      return function ( input, decimals, decPoint, thousandsSep ) {
+      return function ( input, kilo, decimals, decPoint, thousandsSep ) {
         if ( isNaN(parseInt(input)) ) { return input; }
-        return humanize.filesize(parseInt(input, decimals || 2, decPoint || '.', thousandsSep || ','));
+        return humanize.filesize(parseInt(input, kilo || undefined, decimals || undefined, decPoint || undefined, thousandsSep || undefined));
       };
     }).
     filter('humanizeOrdinal', function () {
