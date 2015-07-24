@@ -1,6 +1,6 @@
 {
   "name": "angularjs-humanize",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "src/angular-humanize.js",
   "description": "Angular filter for rendering human-readable data",
   "license": "MIT",
