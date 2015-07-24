@@ -4,6 +4,10 @@
   "main": "src/angular-humanize.js",
   "description": "Angular filter for rendering human-readable data",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@109.69.194.29:open-source/angularjs-humanize.git"
+  },
   "dependencies": {
     "angular": "~1.3",
     "humanize": "~0.0.9"
