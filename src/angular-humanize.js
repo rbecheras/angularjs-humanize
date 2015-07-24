@@ -3,9 +3,9 @@
 
   angular.module('angular-humanize', []).
     filter('humanizeFilesize', function () {
-      return function ( input ) {
+      return function ( input, decimals, decPoint, thousandsSep ) {
         if ( isNaN(parseInt(input)) ) { return input; }
-        return humanize.filesize(parseInt(input));
+        return humanize.filesize(parseInt(input, decimals || 2, decPoint || '.', thousandsSep || ','));
       };
     }).
     filter('humanizeOrdinal', function () {
