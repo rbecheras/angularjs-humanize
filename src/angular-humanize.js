@@ -5,7 +5,9 @@
     filter('humanizeFilesize', function () {
       return function ( input, kilo, decimals, decPoint, thousandsSep ) {
         if ( isNaN(parseInt(input)) ) { return input; }
-        return humanize.filesize(parseInt(input), kilo || undefined, decimals || undefined, decPoint || undefined, thousandsSep || undefined);
+        if ( isNaN(parseInt(kilo)) ) { kilo = undefined; }
+        if ( isNaN(parseInt(decimals)) ) { decimals = undefined; }
+        return humanize.filesize(parseInt(input), kilo, decimals, decPoint || undefined, thousandsSep || undefined);
       };
     }).
     filter('humanizeOrdinal', function () {
